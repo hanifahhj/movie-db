@@ -64,7 +64,7 @@
 
     <!-- Footer -->
     <footer class="footer bg-success text-white text-center py-3">
-      &copy; 2025 | Developed by <strong>Rahmi</strong>
+      &copy; 2025 | Developed by <strong>HANIFAH</strong>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
