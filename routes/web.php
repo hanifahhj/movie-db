@@ -20,3 +20,5 @@ Route::Post('/movie/store',[MovieController::class,'store'])->middleware('auth')
 Route::get('/login', [AuthController::class,'formLogin'])->name('login');
 
 Route::post('/login', [AuthController::class,'login']);
+
+Route::post('/logout', [AuthController::class, 'formLogin'])->name('logout');
