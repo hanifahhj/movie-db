@@ -51,10 +51,12 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search movie..." aria-label="Search">
+                <form action="{{ route('search') }}" method="GET" class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" name="query" placeholder="Search movie..."
+                        aria-label="Search">
                     <button class="btn btn-light text-success border-success" type="submit">Search</button>
                 </form>
+
                 <form action="{{ route('logout') }}" method="POST" class="ms-3">
                     @csrf
                     <button type="submit" class="btn btn-outline-light">Logout</button>

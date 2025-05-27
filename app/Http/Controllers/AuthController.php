@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -19,7 +18,7 @@ class AuthController extends Controller
             'password' => ['required']
         ]);
 
-        if (Auth::attempt($credential)){
+        if (Auth::attempt($credential)) {
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
@@ -27,5 +26,15 @@ class AuthController extends Controller
         return back()->withErrors([
             'email' => 'Email atau password salah!'
         ])->onlyInput('email');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }
