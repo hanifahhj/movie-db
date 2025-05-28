@@ -48,6 +48,9 @@
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Comedy</a></li>
                             <li><a class="dropdown-item" href="#">Drama</a></li>
+                            <li><a class="dropdown-item" href="#">sci-fi</a></li>
+                            <li><a class="dropdown-item" href="#">fantasy</a></li>
+                            <li><a class="dropdown-item" href="#">documenter</a></li>
                         </ul>
                     </li>
                 </ul>

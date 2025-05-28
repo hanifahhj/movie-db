@@ -4,10 +4,16 @@
 
 @section('content')
 
+<h1>Form Tambah Movie</h1>
+
+{{-- Tombol Data di bawah judul, kiri --}}
+<div class="mb-3">
+    <a href="{{ route('datamovie') }}" class="btn btn-primary">Data</a>
+</div>
+
 {{-- form movie --}}
-<h1>Form Data Movie</h1>
 <form action="/movie/store" method="POST" enctype="multipart/form-data">
-    @csrf {{-- Jangan lupa token CSRF untuk keamanan --}}
+    @csrf
 
     {{-- Title --}}
     <div class="mb-3 row">
@@ -26,19 +32,17 @@
     </div>
 
     {{-- Category --}}
-<div class="mb-3 row">
-    <label for="category_id" class="col-sm-2 col-form-label">Category</label>
-    <div class="col-sm-10">
-        <select class="form-select" id="category_id" name="category_id" required>
-            <option value="" selected disabled>-- Pilih Category --</option>
-            @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->category_name }}</option>
-            @endforeach
-        </select>
+    <div class="mb-3 row">
+        <label for="category_id" class="col-sm-2 col-form-label">Category</label>
+        <div class="col-sm-10">
+            <select class="form-select" id="category_id" name="category_id" required>
+                <option value="" selected disabled>-- Pilih Category --</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                @endforeach
+            </select>
+        </div>
     </div>
-</div>
-
-
 
     {{-- Year --}}
     <div class="mb-3 row">

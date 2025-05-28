@@ -57,4 +57,12 @@ class MovieController extends Controller
 
         return view('search_result', compact('movies', 'query'));
     }
+
+    public function datamovie()
+{
+    $movies = Movie::with('category')->latest()->get(); // Ambil semua data movie dengan relasi category
+    return view('datamovie', compact('movies'));
+}
+
+
 }
